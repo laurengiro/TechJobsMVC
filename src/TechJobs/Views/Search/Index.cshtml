@@ -35,7 +35,8 @@
     // TODO #2 - Loop over jobs dictionary and display all job fields
     @foreach (Dictionary<string, string> job in ViewBag.jobs)
     {
-        <table>
+        <table class="job-listing">
+        <tbody>
             @foreach (string column in job.Keys)
             {
                 <tr>
@@ -43,7 +44,7 @@
                     <td>@job[column]</td>
                 </tr>
             }
+        </tbody>
         </table>
-        <br />
     }
 }
